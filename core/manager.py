@@ -7,4 +7,4 @@ class MinitManager(Command):
     )
 
     def run(self, name):
-        print "Minit actions goes here, param :%s" % name
+        print("Minit actions goes here, param :%s" % name)

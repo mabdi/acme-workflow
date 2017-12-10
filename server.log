@@ -1,0 +1,144 @@
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 57, in wrapper
+    web_result = f(*args, **kwds)
+  File "E:\github_clones\acme-workflow\modules\routes\bp_order.py", line 83, in list_hook
+    sample.method1(flat_multi(request.form))
+NameError: name 'sample' is not defined
+
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': None}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': None}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': None}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 133, in wrapper
+    return modules.auth.error404()      # TODO do parametric
+  File "E:\github_clones\acme-workflow\modules\auth.py", line 45, in error404
+    return redirect(url_for("root"))
+NameError: name 'redirect' is not defined
+
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 133, in wrapper
+    return modules.auth.error404()      # TODO do parametric
+  File "E:\github_clones\acme-workflow\modules\auth.py", line 45, in error404
+    return redirect(url_for("root"))
+NameError: name 'url_for' is not defined
+
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+Traceback (most recent call last):
+  File "E:\github_clones\acme-workflow\core\annotations.py", line 135, in wrapper
+    return render_template(template, data = data)
+NameError: name 'render_template' is not defined
+
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_orders', 'args': (), 'kwargs': {}, 'result': []}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}
+{'name': 'modules.order.list_products', 'args': (), 'kwargs': {}, 'result': [<Product 1>, <Product 2>, <Product 3>, <Product 4>, <Product 5>]}

@@ -8,7 +8,7 @@ from core.common import WebSuccess, WebError, WebException, InternalException, S
 from core.common import validate
 from datetime import datetime
 from functools import wraps
-from flask import session, request, abort, Response
+from flask import session, request, abort, Response, render_template
 
 write_logs_to_db = False # Default value, can be overwritten by api.py
  
@@ -117,10 +117,26 @@ def validation(schema):
     def true_decorator(f):
         @wraps(f)
         def wrapped(*args, **kwargs):
-            if type( kwargs['params'] ) is dict:
-                validate(schema, kwargs['params'])
-                return f(*args, **kwargs)
-            else:
-                raise WebException("No dict param with name `params` found. It's required for validation.")
+            validate(schema, args[0])
+            return f(*args, **kwargs)
         return wrapped
+    return true_decorator
+
+def web_wrapper(template, requires_login):
+    
+    def true_decorator(f):
+
+        @wraps(f)
+        def wrapper(*args, **kwds):          
+            try:
+                if requires_login and not modules.auth.is_logged_in():
+                    return modules.auth.error404()      # TODO do parametric
+                data = f(*args, **kwds) 
+                return render_template(template, data = data)
+            except Exception as error:
+                core.logger.error(traceback.format_exc())
+                # return  render_template('error500')
+
+        return wrapper
+
     return true_decorator

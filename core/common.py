@@ -178,6 +178,7 @@ def safe_fail(f, *args, **kwargs):
     try:
         return f(*args, **kwargs)
     except APIException:
+        
         return None
 
 

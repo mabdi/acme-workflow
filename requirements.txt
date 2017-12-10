@@ -7,3 +7,4 @@ SQLAlchemy-Utils
 Flask-Migrate
 voluptuous
 flask_script
+pillow

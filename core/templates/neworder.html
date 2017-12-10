@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>AOS: New Order</title>  
+  <link rel='stylesheet prefetch' href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel='stylesheet prefetch' href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}">
+  <link rel='stylesheet prefetch' href="{{ url_for('static', filename='css/bootstrapValidator.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style-detail.css') }}">
+</head>
+
+<body>
+  <div class="container">
+
+    <form class="well form-horizontal" action="{{ url_for('orders.new_add_hook') }}" method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>New Order</legend>
+{% if error %}
+<div class="alert alert-danger">
+  <strong>Error!</strong> {{ error }}
+</div>
+{% endif %}
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Product</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-shopping-cart"></i></span>
+    <select name="product" class="form-control selectpicker" >
+      <option value=" " >Select Something</option>
+      {% for product in data %}
+      <option value="{{product.id}}" {% if params and params["product"]|int == product.id|int %} selected="selected" {% endif %}>{{ product.name}}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Count</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-question-sign"></i></span>
+  <input name="count" placeholder="Count" class="form-control"  type="text" {% if params and params["count"] %} value="{{params['count']}}" {% endif%}>
+    </div>
+</div>
+</div>
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Any Customization</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-wrench"></i></span>
+        	<textarea class="form-control" name="description" placeholder="Any Customization">{% if params and params["description"] %}{{params['description']}}{% endif%}</textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-success" ><span class="glyphicon glyphicon-certificate"> </span> Order Now <span class="glyphicon glyphicon-certificate"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrapvalidator.min.js') }}"></script>
+
+    <script  src="{{ url_for('static', filename='js/js-detail.js') }}"></script>
+
+</body>
+</html>
