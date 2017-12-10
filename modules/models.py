@@ -63,12 +63,5 @@ class Order(db.Model):
     state = db.Column(db.Integer)
     cost = db.Column(db.Integer)
     test_pass = db.Column(db.Integer)
-
-class Payment(db.Model):
-    __tablename__ = 'payments'
-    id = db.Column(db.Integer,primary_key=True, autoincrement=True)
-    order_id = db.Column(db.Integer, db.ForeignKey('orders.id'))
-    order = relationship("Order", foreign_keys=order_id)
-    amount =  db.Column(db.Integer)
-    date =  db.Column(db.Integer)
+ 
 
