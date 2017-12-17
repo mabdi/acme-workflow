@@ -1,9 +1,7 @@
 # acme-workflow
-A sample vulnerable website for demo Tadarokat
+A sample vulnerable website for demo burp-workflow extension
 
-Based on minit framework
-
-
+Based on Flask
 
 
 # Resources
