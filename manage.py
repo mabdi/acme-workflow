@@ -20,6 +20,7 @@ from modules.models import *
 
 @manager.command
 def filldb():
+    user0 = User(username="roadrunner",password="roadrunner",role=roles["customer"])
     user1 = User(username="coyote",password="coyote",role=roles["customer"])
     user2 = User(username="baymax",password="baymax",role=roles["sales"])
     user3 = User(username="kevin",password="kevin",role=roles["engineering"])
@@ -27,6 +28,7 @@ def filldb():
     user5 = User(username="panda",password="panda",role=roles["finance"])
     user6 = User(username="ralph",password="ralph",role=roles["test"])
 
+    db.session.add(user0)
     db.session.add(user1)
     db.session.add(user2)
     db.session.add(user3)

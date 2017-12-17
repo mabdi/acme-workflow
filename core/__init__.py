@@ -3,16 +3,20 @@ import logging
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from logging.handlers import RotatingFileHandler
+from datetime import datetime,timedelta
 
 # flask object
 app = Flask(__name__, static_path="/static")
 
 # configs
-app.config["SESSION_COOKIE_PATH"] = core.config.session_cookie_path
-app.config["SESSION_COOKIE_NAME"] = core.config.session_cookie_name
-app.secret_key = core.config.secret_key
-app.config['SQLALCHEMY_DATABASE_URI']  = core.config.sqlalchemy_database_uri
-app.config['APPLICATION_ROOT'] = '/aos4dev'
+app.config.update(
+    SESSION_COOKIE_PATH=core.config.session_cookie_path,
+    SESSION_COOKIE_NAME=core.config.session_cookie_name, 
+    SECRET_KEY=core.config.secret_key,
+    SQLALCHEMY_DATABASE_URI=core.config.sqlalchemy_database_uri,
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+)
+app.permanent_session_lifetime = timedelta(minutes=20)
 
 
 

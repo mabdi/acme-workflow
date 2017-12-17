@@ -30,20 +30,18 @@ def new_add_hook():
     except WebException as error:
         data = order.list_products()
         return render_template('neworder.html', error = _get_message(error), data=data,params = params)
-    
-    
 
+@blueprint.route('/edit')
+@web_wrapper(template='detail.html',requires_login=True)
+def edit_get_hook():
+    params = flat_multi(request.values)
+    return order.get_order(params['order_id'])
 
-@blueprint.route('/edit', methods=['GET', 'POST'])
+@blueprint.route('/edit', methods=["POST"])
 def edit_hook():
-    return render_template('login.html')    
-
-
-@blueprint.route('/view', methods=['GET', 'POST'])
-def view_hook():
-    sample.method1(flat_multi(request.values))
-    return WebSuccess("method1 done.")
-
+    params = flat_multi(request.values)
+    order.update_order(params)
+    return redirect(url_for("orders.list_hook"))
 
 @blueprint.route('/confirm_add', methods=['GET', 'POST'])
 def ok_sales_hook():

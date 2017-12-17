@@ -1,6 +1,6 @@
 session_cookie_path = "/"
 session_cookie_name = "cookie"
-secret_key = "ashdjhasdjasdkasld;aksdjasndnasd"
+secret_key = "ashdjhasdjasdkasld;aksssdjasndnasd"
 sqlalchemy_database_uri = 'mysql+pymysql://root:@localhost/acme_aos'
 
 run = {

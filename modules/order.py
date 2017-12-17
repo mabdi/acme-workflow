@@ -48,10 +48,20 @@ def get_product_by_id(id):
     return Product.query.filter_by(id=id).first()
 
 def change_state(order_id,to_state):
-    order = Order.query.filter_by(id=order_id).first() #.update({"state": to_state})
+    order = Order.query.filter_by(id=order_id).first()
     order.state = to_state
     db.session.commit()
     
 def set_cost(order_id,cost):
     Order.query.filter_by(id=order_id).update({"cost": cost})
+    db.session.commit()
+
+def get_order(order_id):
+    return Order.query.filter_by(id=order_id).first()
+
+def update_order(params):
+    print(params)
+    p = get_order(params['order_id'])
+    p.count = params['count']
+    p.description = params['description']
     db.session.commit()

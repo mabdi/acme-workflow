@@ -13,6 +13,9 @@ def validate(inp):
 
 def refresh():
     text = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(5))
+    # I know, It's not secure. flask default session management send all data to user as base64.
+    # flask-session is recomended.
+    # TODO
     session['captcha'] = text
     out = StringIO()
     img = make_image(text)
