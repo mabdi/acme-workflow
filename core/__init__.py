@@ -1,6 +1,6 @@
 import core.config
 import logging
-from flask import Flask
+from flask import Flask, Blueprint
 from flask_sqlalchemy import SQLAlchemy
 from logging.handlers import RotatingFileHandler
 from datetime import datetime,timedelta
@@ -33,5 +33,5 @@ app.logger.addHandler(handler)
 from modules.routes import bp_order
 from modules.routes import bp_captcha
 
-app.register_blueprint(bp_order.blueprint, url_prefix="/order")
-app.register_blueprint(bp_captcha.blueprint, url_prefix="/captcha")
+app.register_blueprint(bp_order.blueprint, url_prefix= core.config.url_prefix + "/order")
+app.register_blueprint(bp_captcha.blueprint, url_prefix= core.config.url_prefix + "/captcha")

@@ -139,11 +139,13 @@
                             </div>
                             {% endif %}
                             <div class="row">
-                                {% if session["role"] == 90 and order.state
-                                < 2 %} <div class="col-xs-12 col-md-6">
-                                    <a class="btn btn-success" href="{{ url_for('orders.edit_hook', order_id = order.id) }}">Edit</a>
+                                    {% if session["role"] == 90 and order.state < 2 %} 
+                                    <div class="col-xs-12 col-md-6">
+                                        <a class="btn btn-success" href="{{ url_for('orders.edit_hook', order_id = order.id) }}">Edit</a>
+                                    </div>
 
-                                    {% endif %} {% if session["role"] == 90 and order.state == 4 %}
+                                    {% endif %} 
+                                    {% if session["role"] == 90 and order.state == 4 %}
                                     <div class="col-xs-12 col-md-6">
                                         <a class="btn btn-success" href="{{ url_for('orders.pay_hook', order_id = order.id) }}">Pay</a>
                                     </div>
