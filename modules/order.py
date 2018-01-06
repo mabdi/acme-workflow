@@ -40,7 +40,7 @@ def list_products():
 @validation(schema=new_order_schema)
 def new(params):
     p = Order(user_id= session['uid'], product_id= params['product'], count = params['count'], description= params['description'],
-                    date = datetime.now(), state = states['added'],cost=-1, test_pass = 0)
+                    date = int(datetime.now().timestamp()), state = states['added'],cost=-1, test_pass = 0)
     db.session.add(p)
     db.session.commit()
 

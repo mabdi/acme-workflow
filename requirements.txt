@@ -1,5 +1,5 @@
 Flask
-py3k-bcrypt
+#py3k-bcrypt
 pymysql
 flask-sqlalchemy
 SQLAlchemy
